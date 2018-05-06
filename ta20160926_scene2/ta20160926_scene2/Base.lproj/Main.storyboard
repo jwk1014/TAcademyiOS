@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1Cn-Jy-c9n">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ta20160926_scene2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYK-jq-Wlu">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="28" width="400" height="572"/>
+                                </variation>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="kYK-jq-Wlu" secondAttribute="trailing" constant="-20" id="PyK-Xp-3rQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kYK-jq-Wlu" secondAttribute="bottom" id="Uje-K3-12b"/>
+                            <constraint firstItem="kYK-jq-Wlu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="fOJ-1b-n9c"/>
+                            <constraint firstItem="kYK-jq-Wlu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="pSz-eX-5Xr"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="kYK-jq-Wlu"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Uje-K3-12b"/>
+                                <exclude reference="PyK-Xp-3rQ"/>
+                                <exclude reference="fOJ-1b-n9c"/>
+                                <exclude reference="pSz-eX-5Xr"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="kYK-jq-Wlu"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Uje-K3-12b"/>
+                                <include reference="PyK-Xp-3rQ"/>
+                                <include reference="fOJ-1b-n9c"/>
+                                <include reference="pSz-eX-5Xr"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="YKf-so-IZN">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="s4m-3O-9Ov"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="kYK-jq-Wlu" id="xV1-S8-25m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1075.5" y="464"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="crx-EM-hhd">
+            <objects>
+                <navigationController id="1Cn-Jy-c9n" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pv3-Tw-Gya">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="liF-Sz-Yez" kind="relationship" relationship="rootViewController" id="0UB-pK-MoW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dXP-FT-4rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-331.5" y="458"/>
+        </scene>
+        <!--Table Table View Controller-->
+        <scene sceneID="BTg-o1-Q1a">
+            <objects>
+                <tableViewController id="liF-Sz-Yez" customClass="TableTableViewController" customModule="ta20160926_scene2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UiO-PB-W1i">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="URL_CELL" id="TKa-h8-lv3">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TKa-h8-lv3" id="rYE-Yh-m1s">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="8fN-RZ-RfG"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="liF-Sz-Yez" id="DrO-Nb-UwW"/>
+                            <outlet property="delegate" destination="liF-Sz-Yez" id="FE2-Yr-w89"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="1Xu-ps-Lys"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UaF-wR-O0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="403.5" y="464"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ta20160929_imagepicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C9E-eO-0SB">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VI-Sp-AEG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="eventButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CPh-Im-UIv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="C9E-eO-0SB" secondAttribute="trailing" id="BRo-B1-qDV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5VI-Sp-AEG" secondAttribute="bottom" constant="20" id="ZJv-w1-RyQ"/>
+                            <constraint firstItem="C9E-eO-0SB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="day-kd-Q45"/>
+                            <constraint firstItem="5VI-Sp-AEG" firstAttribute="top" secondItem="C9E-eO-0SB" secondAttribute="bottom" constant="8" id="fKm-QX-gci"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="C9E-eO-0SB" secondAttribute="leading" id="o9K-Ns-pEg"/>
+                            <constraint firstItem="5VI-Sp-AEG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q1r-7e-9YE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="C9E-eO-0SB"/>
+                                <exclude reference="5VI-Sp-AEG"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="BRo-B1-qDV"/>
+                                <exclude reference="day-kd-Q45"/>
+                                <exclude reference="o9K-Ns-pEg"/>
+                                <exclude reference="fKm-QX-gci"/>
+                                <exclude reference="q1r-7e-9YE"/>
+                                <exclude reference="ZJv-w1-RyQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="C9E-eO-0SB"/>
+                                <include reference="5VI-Sp-AEG"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="BRo-B1-qDV"/>
+                                <include reference="day-kd-Q45"/>
+                                <include reference="o9K-Ns-pEg"/>
+                                <include reference="fKm-QX-gci"/>
+                                <include reference="q1r-7e-9YE"/>
+                                <include reference="ZJv-w1-RyQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="C9E-eO-0SB" id="ZVT-AF-uee"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="315"/>
+        </scene>
+    </scenes>
+</document>
